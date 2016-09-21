@@ -1,0 +1,7 @@
+1. Node.js is a platform for building server-side event-driven i/o application using JavaScript. Express.js is a framework based on node.js for building web-application using priciples and approaches of node.js. (http://stackoverflow.com/questions/12668880/difference-between-node-js-and-express-js)
+
+2. packages.json holds various metadata relevant to the project. This file is used to give information to npm that allows it to identify the project as well as handle the project's dependencies. It can also contain other metadata such as a project description, the version of the project, license information, and even configuration data. (https://docs.nodejitsu.com/articles/getting-started/npm/what-is-the-file-package-json/)
+
+3. These files are static in the sense that their form cannot be edited. Express.js is just serving up these files as is, and there is no dynamic features to these files.
+
+4. The server only continues to serve up the hello-world message if the path is '/' or the home path. When a specfic static file path is given in the URL, then that path is served up. But if the path is the home path, where no static file is set up yet, the hello-world message is served up.

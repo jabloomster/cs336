@@ -1,0 +1,11 @@
+{
+  "name": "lab03",
+  "version": "1.0.0",
+  "description": "lab 3",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Jesse Bloomster",
+  "license": "ISC"
+}

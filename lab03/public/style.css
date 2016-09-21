@@ -1,0 +1,10 @@
+/* 
+ * style.css is a style sheet for this webpage.
+ * 
+ * author: Jesse Bloomster
+ * date: September 21, 2016
+ */
+
+ul {
+	list-style-type: square;
+}
