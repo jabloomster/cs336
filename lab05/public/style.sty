@@ -1,0 +1,63 @@
+/* CSS file for lab 05
+ * @author: Jesse Bloomster
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes
+ */
+
+padding-size = 20px // padding for boxes
+border-style = 1px solid black // border for boxes
+
+body 
+	font 24px Helvetica
+	background #999999
+
+#main 
+	min-height 500px
+	margin 0px
+	padding 0px
+	display flex
+	flex-flow row
+	article // article box
+		padding padding-size
+		border border-style
+		background #dddd88
+		order 2
+	nav // far left navigation
+		padding padding-size
+		border border-style
+		background #ccccff
+		flex 1 6 20%
+		order 1
+	aside // far right text
+		padding padding-size
+		border border-style
+		background #ccccff
+		font-style italic
+		flex 1 6 20%
+		order 3
+
+header, footer 
+	display block
+	padding padding-size
+	min-height 75px
+	border border-style
+	background #ffeebb
+
+header  
+	font-size 40px
+	font-weight bold
+
+footer 
+	font-size 12px
+
+/* Too narrow to support three columns */
+@media all and (max-width 640px) 
+	#main, #page 
+		flex-direction column
+	
+	#main
+		article, aside, nav 
+			/* Return them to document order */
+			order 0
+		nav, aside, header, footer 
+			min-height 75px
+			max-height 75px

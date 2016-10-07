@@ -1,0 +1,71 @@
+/* CSS file for lab 05
+ * @author: Jesse Bloomster
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes
+ */
+body {
+  font: 24px Helvetica;
+  background: #999;
+}
+#main {
+  min-height: 500px;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-flow: row;
+}
+#main article {
+  padding: 20px;
+  border: 1px solid #000;
+  background: #dd8;
+  order: 2;
+}
+#main nav {
+  padding: 20px;
+  border: 1px solid #000;
+  background: #ccf;
+  flex: 1 6 20%;
+  order: 1;
+}
+#main aside {
+  padding: 20px;
+  border: 1px solid #000;
+  background: #ccf;
+  font-style: italic;
+  flex: 1 6 20%;
+  order: 3;
+}
+header,
+footer {
+  display: block;
+  padding: 20px;
+  min-height: 75px;
+  border: 1px solid #000;
+  background: #feb;
+}
+header {
+  font-size: 40px;
+  font-weight: bold;
+}
+footer {
+  font-size: 12px;
+}
+/* Too narrow to support three columns */
+@media all and (max-width: 640px) {
+  #main,
+  #page {
+    flex-direction: column;
+  }
+  #main article,
+  #main aside,
+  #main nav {
+/* Return them to document order */
+    order: 0;
+  }
+  #main nav,
+  #main aside,
+  #main header,
+  #main footer {
+    min-height: 75px;
+    max-height: 75px;
+  }
+}
