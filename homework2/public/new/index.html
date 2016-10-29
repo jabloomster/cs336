@@ -1,0 +1,39 @@
+<!--
+     HTML Form example with CSS
+     This is based on https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/My_first_HTML_form
+     author: jabloomster
+     date: October 28, 2016
+   -->
+<html>
+	<head>
+		<title>Lab 6</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<form id="newID" action="/forms" method="post">
+			<div>
+				<label for="fname">First Name:</label>
+				<input type="text" id="fname" name="user_fname" required />
+			</div>
+			<div>
+				<label for="lname">Last Name:</label>
+				<input type="text" id="lname" name="user_lname" required />
+			</div>
+			<div>
+				<label for="idnumber">ID#:</label>
+				<input type="txt" id="idnumber" name="user_id" required />
+			</div>
+			<div>
+				<label for="startdate">Start Date:</label>
+				<input type="date" id="date" name="user_start" required />
+			</div>
+		
+			<div class="button">
+				<button type="submit">Create Record</button>
+			</div>
+		</form>
+	</body>
+</html>

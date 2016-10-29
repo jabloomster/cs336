@@ -1,0 +1,35 @@
+/* CSS Stylesheet for index.html in homework2
+ *
+ * @author: jabloomster
+ * @date: October 28, 2016
+ */
+
+input {
+	padding: 10px;
+	margin-right: 0px;
+	float: left;
+	border: solid 5px #c9c9c9;
+	transition: border 0.3s;
+}
+
+#search {
+	height: 45px;
+	width: 75px;
+	float: left;
+	text-align: center;
+	line-height: 45px;
+	vertical-align: middle;
+	background: #c9c9c9;
+	cursor: pointer;
+	cursor: hand;
+}
+
+#clear {
+	clear: both;
+}
+
+#info {
+	position: relative;
+	top: 40px;
+	font-size: 14pt;
+}
