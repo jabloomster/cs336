@@ -1,0 +1,30 @@
+Answers to lab questions:
+
+A.i. React is composable. This means you do not have to return basic HTML, rather you can return a tree of components that you have built.
+     The render() function returns the tree of components to eventually render to HTML. Composable means the simple components can
+     be used to build more complicated ones.
+  ii. The JSX compiler will automatically rewrite HTML tages to React.createElement(tagName) expressions and leave everything else alone.
+      This is to prevent the pollution of the global namespace. It is similar to HTML, but not exactly the same. It writes to the 
+      Virtual DOM, rather than the actual DOM, to increase speed and productivity.
+  iii. Props allow data to be passed from one component to another, expecially a child or parent. Calling props passes data from 
+       CommentBox to the CommentList. To load comments, event handlers to components are used. As user enters text, callbacks are
+       used to change the state. When the user submits the form, the list of comments are refreshed. Using the child's render method,
+       data is passed from the child up to the parent. Then the list of comments is refreshed within the CommentBox. When saved, the
+       data is written to the server and written to the database (in this case a doc).
+  iv. props is immutable, meaning it is static. The component is owned by the parent. State is mutable, meaning it is dynamic,
+      especially useful for interactions. When the state updates, the componenet re-renders itself.
+
+B. i. When you add or remove a legal comment from the comments.json file, the web page updates with the addition or removal of the
+      specific comment when you re-save the comments.json file. The CommentBox component is polling the data structure (api/comments)
+      every 2 seconds. So if a legal comment is added or removed from the file, the CommentBox listener re-renders after 2 seconds,
+      meaning the new file contents are shown on the document.
+   ii. It does not call render() because it is simply loading the comments into the data state. Once the state is changed, the 
+       render() calls are made by the children, as each comment is then displayed. If everytime CommentBox was simply loading
+       comments it had to render(), this would reduce speed.
+   iii. By representing the current state of view, when new states are introduced or the state changes, the view can update with the 
+        state. If the state did not represent the current view, it would be a step behind. When the state would change, it would 
+        now take longer for the view to change with it.
+   iv. In cases where the server rejects a comment, yes it may seem like foolish. But optimization deals with the majority of cases,
+       where speed up is valued. For most of the time, pre-creating an id for the comment before the server responds will decrease
+       wait time for the user. It is predicting what will happen. It won't always be correct, but for the majority of the time,
+       time will be saved.
