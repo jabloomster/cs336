@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1388534400000,
+        "author": "Pete Hunt",
+        "text": "Hey there!"
+    },
+    {
+        "id": 1420070400000,
+        "author": "Paul O’Shannessy",
+        "text": "React is <em>great</em>!"
+    },
+    {
+        "id": 1464988717637,
+        "author": "evil",
+        "text": "<a href=\"javascript:alert(1)\">alert(1)</a>"
+    },
+    {
+        "id": 1477329719023,
+        "author": "jesse",
+        "text": "hello"
+    },
+    {
+        "id": 1477694401222,
+        "author": "mike",
+        "text": "just do it"
+    },
+    {
+        "id": 1478105461420,
+        "author": "charles barkley",
+        "text": "go suns"
+    }
+]
