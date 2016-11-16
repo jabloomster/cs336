@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // Connect to MongoDB
 var db;
-var PASSWORD = '******';
+var PASSWORD = '*****';
 var mongoURL = 'mongodb://cs336:' + PASSWORD + '@ds139937.mlab.com:39937/cs336';
 MongoClient.connect(mongoURL, function(err, dbConnection) {
 	if (err) throw err;
